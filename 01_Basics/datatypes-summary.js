@@ -35,3 +35,30 @@ const myfunction = function(){
 console.log(typeof bigNumber);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+
+// ------------------------------------------------------
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myName = "Meet"
+
+let anotherName = myName   // here when we say anotherName = myName, the original val is not assigned
+anotherName = "chintu"     // instead an copy of myName value is created in the stack where update is done
+                            
+console.log(myName);
+console.log(anotherName);
+
+let user1 = {
+    email: "user@google.com",
+    upi: "user@xyz"
+}
+
+let user2 = user1
+
+user2.email = "meet@google.com"
+
+console.log(user1.email);
+console.log(user2.email);
