@@ -56,6 +56,10 @@ users[1].id
 // console.log(instaUser.hasOwnProperty('isLoggedIn'));
 // console.log(instaUser.hasOwnProperty('isLogged'));
 
+
+
+// Deconstruct objects
+
 const course = {
     coursename: "JS",
     price: 0,
@@ -70,6 +74,10 @@ const {courseInstructor: a} = course
 
 // console.log(courseInstructor);
 console.log(a);
+
+
+
+// JSON
 
 // {
 //     "name": " meet ",
