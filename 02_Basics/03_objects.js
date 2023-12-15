@@ -18,7 +18,7 @@ const JsUser = {
 
 // console.log(JsUser.email);
 // console.log(JsUser["email"]);
-// // console.log(JsUser.Full name);    // cant access the key "Full name" value with '.' method
+// // console.log(JsUser.Full name);    // can't access the key "Full name" value with '.' method
 // console.log(JsUser[mySym]);          // Symbol 
 
 JsUser.email = "meet@micro.com"
