@@ -18,14 +18,14 @@ switch (month) {
         break;
     case 3:
         console.log("march");
-        break;
+        // break;
     case 4:
         console.log("april");
-        break;
+        // break;
     default:
         console.log("default case matched");
         break;
 }
 
-// if breake not written whichever case matched that one and all below it will be executed except defult
+// if breake not written whichever case matched that one and all below it will be executed
 
