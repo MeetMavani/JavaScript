@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #212122; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img id="anime" width="200px" 
+                src="https://i.pinimg.com/564x/2f/50/84/2f50842ba2541ea1c22f2d37fa04e82c.jpg" 
+                alt="anime"></li>
+            <li><img id="gojo" width="200px" 
+                src="https://i.pinimg.com/564x/44/e3/c5/44e3c52f1efe7432dc71bad6e0a2f96c.jpg" 
+                alt="anime"></li>
+            <li><img id="giyu" width="200px" 
+                src="https://i.pinimg.com/564x/81/94/8c/81948c8e03483c9aabdb33d6721a6560.jpg" 
+                alt=""></li>
+            <li><img id="deku" width="200px" 
+                src="https://i.pinimg.com/564x/60/a2/c6/60a2c63fb67d3797e64ffc358a29a843.jpg" 
+                alt="" ></li>     <!--not a feasible approach when app will be scaled it will cause probs--> 
+                 <!-- onclick="alert('Deku')"  -->
+
+            <li><a style="color: aliceblue;" href="https://google.com" id = "google">Google</a></li>  
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('deku').onclick = function() {
+    //     alert("deku clicked")       // this approach has problesm too features kum deta as compared to event listeners   
+    // }
+
+    //attachEvent()
+    // jQuery - on
+    
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftkey, keyCode
+
+    // document.getElementById('deku').addEventListener('click', function(){
+    //     alert("deku image clicked again")
+    // } ) // , false
+    // event listeners provides not only onclick functionalities but propagation ability too
+    // Event questions
+        
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false )  // false causes bubbling     true: capturing mode 
+
+    // document.getElementById('deku').addEventListener('click', function(e){
+    //     console.log("clicked deku");   
+    //     e.stopPropagation() 
+    // }, false )
+    
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     console.log("google clicked");
+    // }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode);   // or tagName
+
+        if (tagName === 'IMG') {
+            console.log(e.target.id);    
+        let removeIt = e.target.tagName
+        removeIt.remove()
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+    }, false)
+
+</script>
+</html>
