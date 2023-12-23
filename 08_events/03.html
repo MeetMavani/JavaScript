@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>“If you only do what you can do,
+        you will never be more than who you are.”
+        ― Master Shifu
+    </h2>
+    <button id = "start">Start</button>
+    <button id = "stop">Stop</button>
+
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    // const InstervalID = setInterval(sayDate, 1000, "Hi")
+    // clearInterval(InstervalID)
+    
+    var InstervalID;
+    
+    document.querySelector('#start').addEventListener('click', function(){
+        InstervalID = setInterval(sayDate, 1000, "Hi")
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(InstervalID)
+    })
+
+</script>
+</html>

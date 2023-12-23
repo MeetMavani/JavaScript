@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id = "stop">Stop</button>
+</body>
+<script>
+    const SayMeet = function(){
+        console.log("Hi meet");
+    }
+
+    //document.querySelector('h1').innerHTML = "Hi Meet"
+
+    const changeH1Text = function(){
+        document.querySelector('h1').innerHTML = "Hi Meet"
+    }
+    
+    setTimeout(SayMeet, 2000) // only reference dont execute
+    const changeMe = setTimeout(changeH1Text, 2000)  // jst like pop up adds
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+
+</script>
+</html>
